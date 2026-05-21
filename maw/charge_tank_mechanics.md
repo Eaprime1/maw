@@ -1,8 +1,8 @@
-# charge_tank_mechanics
+# charge_tank_mechanics 🍥
 
 ## Build-up
 
-- Sacred Pools accumulate **Resonance Charge** at stable one-hertz pulse.
+- Sacred Pools accumulate **Resonance Charge** at a stable 1 Hz pulse.
 - Mission completion, Ka-pressure milestones, and pattern recognition accelerate charge fill.
 
 ## Trigger (Flush)
