@@ -143,7 +143,14 @@ Chain of Custody: OPEN
 
 ```bash
 bash tools/scan_lexeme.sh maw/     # advisory: unfilled template fields
-ls maw/working/                    # every arrival folder has an ARRIVAL.md
+
+# fails if any arrival folder is missing its ARRIVAL.md
+missing=0
+for d in maw/working/*/; do
+  [ -d "$d" ] || continue
+  [ -f "${d}ARRIVAL.md" ] || { echo "missing: ${d}ARRIVAL.md"; missing=1; }
+done
+[ "$missing" -eq 0 ] && echo "every arrival has an ARRIVAL.md"
 ```
 
 Every arrival folder in the PR has a matching `registry/custody_log.md` entry.
