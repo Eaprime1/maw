@@ -12,7 +12,7 @@ One fenced block per entry:
 
 ```yaml
 prima_clock: YYYYMMDDHHMM
-event:       arrive | route | fracture | advance | pinnacle | correction
+event:       arrive | route | fracture | advance | flush | leave | pinnacle | correction
 item:        <arrival folder, e.g. working/202609230702_example>
 from:        <source, or prior pool for a route>
 to:          <pool or plank reached>

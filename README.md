@@ -18,12 +18,11 @@ Carbonite state: 1/3 PLANK / WORK · Chain of Custody: OPEN
 
 ## Place in the constellation
 
-The Maw is one of the custody repos alongside
-[`eaprime1/nullus`](https://github.com/Eaprime1/nullus) and
-[`eaprime1/naught`](https://github.com/Eaprime1/naught), coordinated from
-[`eaprime1/custos`](https://github.com/Eaprime1/custos). Whether the Maw sits
-before Nullus or after it is still an open question for eaprime1. See
-**Open questions** in `maw/ARRIVAL.md`.
+The Maw sits before Nullus in the custody chain: material is transformed
+here, then leaves to [`eaprime1/nullus`](https://github.com/Eaprime1/nullus)
+for nullification, and from there to
+[`eaprime1/naught`](https://github.com/Eaprime1/naught). The chain is
+coordinated from [`eaprime1/custos`](https://github.com/Eaprime1/custos).
 
 ## Also here
 

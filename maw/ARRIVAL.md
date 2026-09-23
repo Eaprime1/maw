@@ -1,6 +1,6 @@
 # ARRIVAL — how content enters the Maw
 
-Carbonite Timestamp: 202609230702  
+Carbonite Timestamp: 202609230814  
 State: 1/3 PLANK / WORK  
 Chain of Custody: OPEN
 
@@ -77,10 +77,37 @@ is wrapped before flush: list its members in the arrival record under
 
 Each step up is a log entry and an update to the arrival's header.
 
-### 6. Leave — held
+### 6. Leave — to Nullus
 
-Where material goes when it leaves the Maw is not settled (see below). Until
-it is, nothing leaves: 3/3 material waits in place with its log entry.
+Material leaving the Maw goes to Nullus for nullification
+([`eaprime1/nullus`](https://github.com/Eaprime1/nullus)); eaprime1, session
+202609230814. Only 3/3 material leaves. Each departure is a `leave` entry in
+`registry/custody_log.md` naming the item and its destination; the arrival
+folder stays here as the Maw's record of what passed through. The carrier
+format Nullus receives is still to be agreed with the Nullus side (see
+**Open questions**).
+
+## Contamination flush — draft
+
+Direction from eaprime1 (session 202609230814); the mechanics are a first
+draft for review. `sacred_pools/` is the top level for pool-type concepts. When
+something in a pool is contaminating it, a flush moves the pool's contents
+into a sandbox holding pool, so the rest of the Maw keeps working and the
+problem is handled before anything goes back into the stream.
+
+1. **Notice.** An item is found contaminating its pool. Note what and why.
+2. **Flush.** Move the affected pool's contents to
+   `sacred_pools/sandbox/<prima-clock>_<pool>/` (working name). Log a `flush`
+   entry listing every item moved.
+3. **Continue.** Other pools and the arrival routine carry on as normal.
+4. **Address.** In the sandbox, separate the contaminating item from the
+   clean ones. Clean items return to their pool (`route` entries). The
+   problem item is worked on in the sandbox until it can re-enter the stream,
+   or is held there. Nothing is erased.
+
+This is a different flush from the **resonance flush** in
+`charge_tank_mechanics.md` (pressure release at critical resonance, Gravitar
+pull). How the two relate is an open question.
 
 ## Arrival record template
 
@@ -121,17 +148,21 @@ ls maw/working/                    # every arrival folder has an ARRIVAL.md
 
 Every arrival folder in the PR has a matching `registry/custody_log.md` entry.
 
+## Answered — eaprime1, session 202609230814
+
+- **Where the Maw sits:** before Nullus.
+- **Outbound:** to Nullus, for nullification.
+
 ## Open questions — held for eaprime1
 
-- **Where the Maw sits in the chain.** The Act II handoff reads
-  *Unknowable → Maw → Known_naught → Nullus*. The nullus canon
-  (`eaprime1/nullus`, `docs/architecture.md`) reads
-  *ANTE-ESSE → THE/SPHINCTER → MAW → System Canon*. This repo's own
-  `events/waterfall_entry.md` has material arriving *from* the Sphincter
-  threshold, which matches the nullus reading. Carry both; pick neither.
-- **Outbound.** Where 3/3 material goes (Nullus intake, System Canon, back to
-  custos) follows from the question above.
-- **Flush.** `charge_tank_mechanics.md` describes a flush at critical
-  resonance. What a flush does to files in `sacred_pools/` (moves them
-  deeper, releases them outbound) is not yet defined, so no flush happens by
-  routine.
+- **Nullus canon alignment.** `eaprime1/nullus` `docs/architecture.md` still
+  reads *ANTE-ESSE → THE/SPHINCTER → MAW → System Canon*, with MAW after the
+  gate. This repo's `events/waterfall_entry.md` has material arriving from the
+  Sphincter threshold. With the Maw before Nullus, which Sphincter is this:
+  the one inside THE, or the Maw's own?
+- **Handoff carrier.** What the Maw hands Nullus on `leave`: the arrival
+  folder as-is, its components, or a carrier record like custos's
+  `GERM_INTAKE`.
+- **Two flushes.** Resonance flush (`charge_tank_mechanics.md`) and
+  contamination flush (above): two kinds, or one mechanism with two
+  triggers? Also, the sandbox pool's real name.
