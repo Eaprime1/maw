@@ -1,52 +1,36 @@
-# Prima Terminal — Template
+# maw
 
-A living template for building **prima terminal** concepts: RPG-style, quest-driven terminal environments where the journey through the command line is the point.
+The **Maw** of THE/UNEXUS: a pool where what enters is transformed. It is
+principium territory: material crosses the waterfall threshold, is fractured
+into component parts, and seeds later Gravitar dynamics.
 
-## What Is a Prima Terminal?
+Carbonite state: 1/3 PLANK / WORK · Chain of Custody: OPEN
 
-A prima terminal is a **concept repo** — a seed-and-quest package that transforms a bare terminal session into a structured, story-driven experience. It defines a world, gives the user quests, and guides them through building real skills and real tools.
+## Start here
 
-It does **not** bundle a terminal emulator. The runtime (Termux, bash, zsh, whatever the platform provides) lives at the system layer. This repo is the concept riding on top of it.
+| Read | For |
+| --- | --- |
+| [`maw/README.md`](maw/README.md) | What the Maw is and its scope |
+| [`maw/PRIMAL_COSMOLOGY.md`](maw/PRIMAL_COSMOLOGY.md) | The mechanics, in seven steps |
+| [`maw/ARRIVAL.md`](maw/ARRIVAL.md) | **Bringing content in**: the arrival routine and record template |
+| [`maw/registry/custody_log.md`](maw/registry/custody_log.md) | Chain of custody for everything that has entered |
+| [`maw/particles/particle_table.md`](maw/particles/particle_table.md) | The particle table |
 
-```
-[ Termux / system terminal ]   ← runtime engine (installed on device, not in this repo)
-        ↕
-    [ Unexusi ]                ← identity + connection layer
-        ↕
-[ Prima Terminal Concept ]     ← this repo: quests, seeds, guides, world
-```
+## Place in the constellation
 
-## Repo Structure
+The Maw is one of the custody repos alongside
+[`eaprime1/nullus`](https://github.com/Eaprime1/nullus) and
+[`eaprime1/naught`](https://github.com/Eaprime1/naught), coordinated from
+[`eaprime1/custos`](https://github.com/Eaprime1/custos). Whether the Maw sits
+before Nullus or after it is still an open question for eaprime1. See
+**Open questions** in `maw/ARRIVAL.md`.
 
-```
-prima.yaml          concept manifest — name, version, runtime requirements
-quests/             RPG-style quest definitions (real tasks, real outcomes)
-seeds/              bootstrap scripts, dotfiles, package lists
-guides/             lore-woven practical documentation
-world/              setting, lore, factions — the conceptual "place"
-unexusi/            connection spec for the Unexusi identity layer
-```
+## Also here
 
-## How to Fork This Template
-
-1. Fork or use this repo as a GitHub template.
-2. Edit `prima.yaml` — give the concept its name, theme, and runtime requirements.
-3. Write the `world/` — who lives here, what this place is.
-4. Build out `quests/` — start with the awakening quest, then grow.
-5. Fill `seeds/` — dotfiles, packages, bootstrap scripts the concept needs.
-6. Write `guides/` — practical docs written as if they belong to the world.
-7. Define `unexusi/connect.yaml` — how users authenticate and carry their state.
-
-## Quest Design Philosophy
-
-Quests are **real work with narrative framing**, not tutorials disguised as stories.
-
-- A quest teaches a skill by requiring its actual use.
-- Completion has a verifiable outcome: a file exists, a script runs, a tool works.
-- Multiple members can contribute quests — the format is a contract, not a script.
-
-See `quests/QUEST_SCHEMA.md` for the full spec.
-
-## Contributing
-
-See [CONTRIBUTING.md](CONTRIBUTING.md). Multiple members can fill in quests, guides, world lore, and seeds — the template structure is designed for collaborative expansion.
+The repo was forked from the prima terminal template. The template layers
+(`intake/` THEE / YOD / EMBER fragments, `quests/`, `turns/`, `tools/`,
+`world/`, `seeds/`, `unexusi/`) are still present and usable. `intake/` is
+for raw fragments and passing thoughts; `maw/working/` is for material that
+has actually entered the Maw. The template's original README is kept at
+[`docs/origin/prima-template-README.md`](docs/origin/prima-template-README.md).
+`prima.yaml` is still the unfilled template. Naming it is an owner act.
