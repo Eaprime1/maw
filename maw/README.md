@@ -16,10 +16,12 @@ The **Maw** is principium territory: first cause, not just first moment. It mode
 
 ## Structure
 
+- `ARRIVAL.md` — the intake routine: arrive, record, route, transform,
+  advance
 - `PRIMAL_COSMOLOGY.md`
 - `particles/`
 - `events/`
-- `registry/`
+- `registry/` — includes `custody_log.md`, the chain-of-custody log
 - `working/`
 - `sacred_pools/`
 - `mobius_rings/`
