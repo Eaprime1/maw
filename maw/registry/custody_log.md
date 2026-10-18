@@ -30,6 +30,14 @@ from:        Eaprime1/maw PR #1 (copilot/blackjack-iteration-21)
 to:          1/3 PLANK / WORK
 by:          eaprime1, Copilot
 note:        founding Maw docs; recorded retroactively at 202609230702
+
+prima_clock: 202610172135
+event:       arrive
+item:        maw/working/202610172135_origin-shadow-seed/
+from:        device primehaven, old eaprime1/radix clones (~/radix, ~/mandelbrot/repo/radix), via ~/primehaven/vetting/radix/
+to:          1/3 PLANK / WORK, pool working
+by:          eaprime1, nav1 (Claude)
+note:        radix seed material needing upgrade; 7 source files + 1 witness copy
 ```
 
 ### Legacy exception — the founding docs
