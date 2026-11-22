@@ -38,4 +38,4 @@ and factions, guides, seeds, unexusi) are kept on file, unchanged, under
 [`docs/origin/template/`](docs/origin/template/), next to the template's
 original README at
 [`docs/origin/prima-template-README.md`](docs/origin/prima-template-README.md).
-`prima.yaml` is still the unfilled template. Naming it is an owner act.
+`prima.yaml` is filled in as a draft (name, slug and tagline are proposed); the final name is an owner act.

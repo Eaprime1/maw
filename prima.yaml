@@ -1,42 +1,100 @@
-# prima.yaml — Concept Manifest
-# Fill this in when you fork the template.
-# Run: bash tools/scan_lexeme.sh to find unfilled placeholders.
+# prima.yaml — Concept Manifest · THE/UNEXUS Maw
+# DRAFT 202611220440 · State: 1/3 PLANK / WORK · Chain of Custody: OPEN
+# Drafted by Navigo for eaprime1 to review. Naming is the owner's act:
+# nothing here is final until eaprime1 says so.
+#
+# Tags on each value:
+#   [stated]   taken from the repo or from Eric's own words (source named)
+#   [proposed] Navigo's guess; change freely
+#   [unknown]  left for eaprime1 to fill
+#
+# Note for tools: seeds/bootstrap.sh reads the first "  name:" and
+# "  version:" lines, so those two stay first in `concept` with no
+# trailing comment.
 
 concept:
-  name: "My Prima Terminal"        # display name of this concept
-  slug: "my-prima-terminal"        # url-safe identifier, no spaces
+  name: "Maw of Penumbra"
+  # [proposed] Eric 202611212040: the name stays in shadow; "maw of penumbra" is the chosen shadow name.
+  # Each repo gets a maw; creating the maw of penumbra makes the space for the penumbra repo.
+  # Still eaprime1's call: change freely.
+  slug: "maw"                      # [proposed] matches the repo name; unexusi/connect.yaml updated to match
+  # [proposed] template default kept; 1/3 PLANK reads as pre-1.0
   version: "0.1.0"
-  tagline: "One line that says what this world is."
-  theme: "general"                 # e.g. unix, networking, coding, creative, survival
+  tagline: "The pool where what enters is transformed: an original arrives, something more leaves."
+  # [proposed] joins README.md ("a pool where what enters is transformed")
+  # and Eric 202611181921 ("an original document enters and something more leaves")
+  theme: "transformation"          # [proposed] template examples don't fit; alternatives: "custody", "cosmology"
+  iteration: "Penumbra (22nd)"     # [stated] Eric 202611212040: 22 Penumbra starts a new progression
+  past_iteration: "Blackjack (21st)"  # [stated] stays active; becomes the past perspective. maw/README.md still carries this label
+  plank: "1/3 WORK"                # [stated] README.md, maw/README.md, maw/ARRIVAL.md
+  carbonite_timestamp: "202605191645"  # [stated] maw/README.md founding stamp
 
 author:
-  handle: ""                       # your handle / team name
-  contact: ""                      # optional — email, url, or @handle
+  handle: "eaprime1"               # [stated] used as reviewer/decider throughout maw/ARRIVAL.md
+  collaborators: ["Navigo (Claude)", "Copilot"]  # [proposed] from custody_log founding entry "by: eaprime1, Copilot"
+  contact: ""                      # [unknown] left blank on purpose — public repo, no personal details
 
 runtime:
-  platform: "termux"               # termux | linux | macos | any
-  min_android_api: 24              # Termux only — omit for other platforms
-  required_packages: []
-  optional_packages: []
+  platform: "any"                  # [proposed] the Maw is docs + git; nothing Termux-specific in maw/
+  required_packages: ["git", "curl", "bash"]   # [stated] curl, git per docs/origin/template/seeds/packages.yaml; bash for bootstrap.sh, tools/*.sh and the ARRIVAL.md check
+  optional_packages: []            # [proposed] seeds/packages.yaml lists vim, python, openssh as optional; not needed by the Maw
 
+# --- The Maw itself (new block; not in the template) -----------------------
+maw:
+  # Path values below are repo-backed facts [stated] unless a line says otherwise.
+  readme: "maw/README.md"   # [stated] file exists
+  cosmology: "maw/PRIMAL_COSMOLOGY.md"   # [stated] file exists
+  arrival: "maw/ARRIVAL.md"   # [stated] file exists
+  routine: ["arrive", "record", "route", "transform", "advance", "leave"]   # [stated] maw/ARRIVAL.md
+  custody_log: "maw/registry/custody_log.md"   # [stated] append only
+  naming_protocol: "maw/registry/naming_protocol.md"   # [stated] file exists
+  particles: "maw/particles/particle_table.md"   # [stated] file exists
+  events: "maw/events/"   # [stated] directory exists
+  charge_tank: "maw/charge_tank_mechanics.md"   # [stated] file exists
+  pools:                                         # [stated] maw/ARRIVAL.md §3
+    working: "maw/working/"   # [stated] maw/ARRIVAL.md §3
+    sacred_pools: "maw/sacred_pools/"   # [stated] maw/ARRIVAL.md §3
+    mobius_rings: "maw/mobius_rings/"   # [stated] maw/ARRIVAL.md §3
+    feeds:
+      fractalization: "maw/feeds/fractalization/"   # [stated] maw/ARRIVAL.md §3
+      pixelization: "maw/feeds/pixelization/"   # [stated] maw/ARRIVAL.md §3
+      sparklization: "maw/feeds/sparklization/"   # [stated] maw/ARRIVAL.md §3
+  planks: ["1/3 WORK", "2/3 STRUCTURE", "3/3 READY", "♠️ Pinnacle"]   # [stated] maw/ARRIVAL.md §5
+  constellation:
+    # [stated] README.md: Maw before Nullus; leaves to nullus, then naught; coordinated from custos.
+    # [stated] Eric 202611212040: the maw comes first. Incoming content may carry personal or
+    # distress material, which is the reason nullus exists. Nullus already exists in shadow, like this repo.
+    upstream: []                   # nothing before the maw
+    leaves_to: "Eaprime1/nullus"   # [stated] maw/ARRIVAL.md §6 — "only 3/3 material leaves"
+    then: "Eaprime1/naught"        # [stated] README.md
+    coordinator: "Eaprime1/custos" # [stated] README.md
+  projects:
+    maw_of_penumbra: null          # [unknown] claude.ai Project from the Penumbra T13 kit; not created yet (portal TD2)
+  # [stated] Eric 202611212040: each repo can have a maw (special-process intake) and a cradle
+  # (concept pipeline). Cradle started before penumbra, so penumbra's cradle begins once the
+  # penumbra repo exists. Peer concepts could use the exchange system as a task or mission.
+  repo_roles: ["maw", "cradle"]
+
+# --- Template layers (kept; paths unchanged) --------------------------------
 unexusi:
   profile_version: "1.0"
   spec: "docs/origin/template/unexusi/connect.yaml"
 
 quests:
-  start: "quests/000-thee-the-door.md"   # first quest — name the concept
+  start: "quests/000-thee-the-door.md"
   format_spec: "docs/origin/template/quests/QUEST_SCHEMA.md"
 
 world:
-  lore: "docs/origin/template/world/lore.md"
+  lore: "docs/origin/template/world/lore.md"            # still template placeholder text
   factions: "docs/origin/template/world/factions.md"
+  the_the: "world/the-the.md"
 
 seeds:
   bootstrap: "docs/origin/template/seeds/bootstrap.sh"
   packages: "docs/origin/template/seeds/packages.yaml"
 
 intake:
-  door: "intake/README.md"
+  door: "intake/README.md"         # raw fragments; maw/working/ is for material that has truly entered
   incoming: "intake/incoming.md"
   triad: "intake/triad-thee-yod-ember.md"
 
