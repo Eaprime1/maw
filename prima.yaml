@@ -36,28 +36,29 @@ author:
 
 runtime:
   platform: "any"                  # [proposed] the Maw is docs + git; nothing Termux-specific in maw/
-  required_packages: ["git"]       # [proposed] arrival routine is git commits; seeds/packages.yaml also lists curl
-  optional_packages: ["bash"]      # [proposed] the ARRIVAL.md check script and tools/*.sh are bash
+  required_packages: ["git", "curl", "bash"]   # [stated] curl, git per docs/origin/template/seeds/packages.yaml; bash for bootstrap.sh, tools/*.sh and the ARRIVAL.md check
+  optional_packages: []            # [proposed] seeds/packages.yaml lists vim, python, openssh as optional; not needed by the Maw
 
 # --- The Maw itself (new block; not in the template) -----------------------
 maw:
-  readme: "maw/README.md"
-  cosmology: "maw/PRIMAL_COSMOLOGY.md"
-  arrival: "maw/ARRIVAL.md"
+  # Path values below are repo-backed facts [stated] unless a line says otherwise.
+  readme: "maw/README.md"   # [stated] file exists
+  cosmology: "maw/PRIMAL_COSMOLOGY.md"   # [stated] file exists
+  arrival: "maw/ARRIVAL.md"   # [stated] file exists
   routine: ["arrive", "record", "route", "transform", "advance", "leave"]   # [stated] maw/ARRIVAL.md
   custody_log: "maw/registry/custody_log.md"   # [stated] append only
-  naming_protocol: "maw/registry/naming_protocol.md"
-  particles: "maw/particles/particle_table.md"
-  events: "maw/events/"
-  charge_tank: "maw/charge_tank_mechanics.md"
+  naming_protocol: "maw/registry/naming_protocol.md"   # [stated] file exists
+  particles: "maw/particles/particle_table.md"   # [stated] file exists
+  events: "maw/events/"   # [stated] directory exists
+  charge_tank: "maw/charge_tank_mechanics.md"   # [stated] file exists
   pools:                                         # [stated] maw/ARRIVAL.md §3
-    working: "maw/working/"
-    sacred_pools: "maw/sacred_pools/"
-    mobius_rings: "maw/mobius_rings/"
+    working: "maw/working/"   # [stated] maw/ARRIVAL.md §3
+    sacred_pools: "maw/sacred_pools/"   # [stated] maw/ARRIVAL.md §3
+    mobius_rings: "maw/mobius_rings/"   # [stated] maw/ARRIVAL.md §3
     feeds:
-      fractalization: "maw/feeds/fractalization/"
-      pixelization: "maw/feeds/pixelization/"
-      sparklization: "maw/feeds/sparklization/"
+      fractalization: "maw/feeds/fractalization/"   # [stated] maw/ARRIVAL.md §3
+      pixelization: "maw/feeds/pixelization/"   # [stated] maw/ARRIVAL.md §3
+      sparklization: "maw/feeds/sparklization/"   # [stated] maw/ARRIVAL.md §3
   planks: ["1/3 WORK", "2/3 STRUCTURE", "3/3 READY", "♠️ Pinnacle"]   # [stated] maw/ARRIVAL.md §5
   constellation:
     # [stated] README.md: Maw before Nullus; leaves to nullus, then naught; coordinated from custos.
