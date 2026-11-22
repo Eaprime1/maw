@@ -18,7 +18,8 @@ concept:
   # Each repo gets a maw; creating the maw of penumbra makes the space for the penumbra repo.
   # Still eaprime1's call: change freely.
   slug: "maw"                      # [proposed] matches the repo name; unexusi/connect.yaml updated to match
-  version: "0.1.0"                 # [proposed] template default kept; 1/3 PLANK reads as pre-1.0
+  # [proposed] template default kept; 1/3 PLANK reads as pre-1.0
+  version: "0.1.0"
   tagline: "The pool where what enters is transformed: an original arrives, something more leaves."
   # [proposed] joins README.md ("a pool where what enters is transformed")
   # and Eric 202611181921 ("an original document enters and something more leaves")
