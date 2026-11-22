@@ -26,10 +26,16 @@ coordinated from [`eaprime1/custos`](https://github.com/Eaprime1/custos).
 
 ## Also here
 
-The repo was forked from the prima terminal template. The template layers
-(`intake/` THEE / YOD / EMBER fragments, `quests/`, `turns/`, `tools/`,
-`world/`, `seeds/`, `unexusi/`) are still present and usable. `intake/` is
-for raw fragments and passing thoughts; `maw/working/` is for material that
-has actually entered the Maw. The template's original README is kept at
+The repo was forked from the prima terminal template. The parts that carry
+THE material stay in place: `intake/` (THEE / YOD / EMBER fragments and the
+THE THE chamber), `world/the-the.md`, `turns/`, `tools/`, and
+`quests/000-thee-the-door.md` (the naming quest). `intake/` is for raw
+fragments and passing thoughts; `maw/working/` is for material that has
+actually entered the Maw.
+
+The pure template placeholders (example quests and quest schema, world lore
+and factions, guides, seeds, unexusi) are kept on file, unchanged, under
+[`docs/origin/template/`](docs/origin/template/), next to the template's
+original README at
 [`docs/origin/prima-template-README.md`](docs/origin/prima-template-README.md).
-`prima.yaml` is still the unfilled template. Naming it is an owner act.
+`prima.yaml` is filled in as a draft (name, slug and tagline are proposed); the final name is an owner act.
