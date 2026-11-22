@@ -21,19 +21,19 @@ runtime:
 
 unexusi:
   profile_version: "1.0"
-  spec: "unexusi/connect.yaml"
+  spec: "docs/origin/template/unexusi/connect.yaml"
 
 quests:
   start: "quests/000-thee-the-door.md"   # first quest — name the concept
-  format_spec: "quests/QUEST_SCHEMA.md"
+  format_spec: "docs/origin/template/quests/QUEST_SCHEMA.md"
 
 world:
-  lore: "world/lore.md"
-  factions: "world/factions.md"
+  lore: "docs/origin/template/world/lore.md"
+  factions: "docs/origin/template/world/factions.md"
 
 seeds:
-  bootstrap: "seeds/bootstrap.sh"
-  packages: "seeds/packages.yaml"
+  bootstrap: "docs/origin/template/seeds/bootstrap.sh"
+  packages: "docs/origin/template/seeds/packages.yaml"
 
 intake:
   door: "intake/README.md"

@@ -23,7 +23,7 @@ Name this concept. Give it its first mark. Open the door.
 1. Open `prima.yaml`
 2. Set `concept.name` — what is this world called?
 3. Set `concept.tagline` — one sentence that says what this world is
-4. Open `world/lore.md` — write the first line of this world
+4. Open `docs/origin/template/world/lore.md` — write the first line of this world
 5. Run: `bash tools/thee.sh "this concept is [your answer]"`
 6. Run: `bash tools/yod.sh "[smallest true first action]"`
 
@@ -37,7 +37,7 @@ grep -q 'name: "My Prima Terminal"' prima.yaml \
 
 ## What Opens Next
 
-Once `prima.yaml` has a name and `world/lore.md` has a first line:
+Once `prima.yaml` has a name and `docs/origin/template/world/lore.md` has a first line:
 
 - Quest 001: Awakening becomes available
 - The intake layer activates
